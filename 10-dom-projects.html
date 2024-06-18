@@ -7,9 +7,35 @@
   <style>
     .subscribe-button {
       border: none;
-      background-color: red;
+      background-color: black;
       color: white;
-      border-radius: 4px;
+      border-radius: 40px;
+      padding: 10px 15px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    body {
+      font-family: cursive;
+    }
+    .is-subscribed {
+      background-color: #F0F0F0;
+      color: black;
+    }
+
+    .cost-button {
+      background-color: green;
+      border: none;
+      color: white;
+      font-size: 15px;
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+
+    .cost-input {
+      padding: 10px;
+      font-size: 15px;
     }
   </style>
 </head>
@@ -24,22 +50,17 @@
   <input onkeydown="
     handleCostKeydown(event);
   " placeholder="Cost of order" 
-    class="js-cost-input">
+    class="js-cost-input cost-input"
+    >
 
 
-  <button onclick="
+  <button class="cost-button" onclick="
     calculateTotal();
   ">Calculate</button>
 
   <p class="js-total-cost"></p>
 
   <script>
-    String(25)
-    console.log('25' - 5);
-    console.log('25' + 5);
-
-    window.document
-    window.console
 
     function handleCostKeydown(event){
     if(event.key === 'Enter') {
@@ -52,7 +73,7 @@
      let cost = Number(inputElement.value);
 
      
-      if(cost > 40) {
+      if(cost < 40) {
        cost += 10
        }
 
@@ -65,8 +86,10 @@
 
       if (buttonElement.innerHTML === 'Subscribe') {
           buttonElement.innerHTML= 'Subscribed'
-      } else {
-        buttonElement.innerHTML = 'Subscribe'
+          buttonElement.classList.add('is-subscribed')
+        } else {
+          buttonElement.innerHTML = 'Subscribe'
+          buttonElement.classList.remove('is-subscribed')
       }
     }
   </script>
