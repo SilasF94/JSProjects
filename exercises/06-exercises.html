@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06 Exercises</title>
+</head>
+<body>
+
+  <script>
+
+    // 6a // 6b // 6c
+    const hour = 19;
+    let name = 'Silas'
+
+    if (hour <= 6 || hour <= 12) {
+      console.log(`Good Morning: ${name}`);
+    }
+    else if (hour >= 13 && hour <= 17){
+      console.log(`Good afternoon ${name}`);
+    }
+    else {
+      console.log(`Good night ${name}`);
+    }
+
+    // 6d  //6e
+    const age = 5;
+    let isHoliday = false;
+
+    if ((age <= 6 || age >=65) && isHoliday){
+      console.log('Discount');
+    }
+    else {
+      console.log('No Discount');
+    }
+
+   // 6f
+    let myNum = Math.random();
+    let result;
+    let guess = 'Heads';
+
+    if (myNum < .5) {
+      result = 'Heads';
+    }
+    else {
+      result = 'Tails';
+    }
+
+    if (guess === result) {
+      console.log('You Win');
+    } else console.log('You Lose');
+    
+
+
+  </script>
+
+</body>
+</html>
